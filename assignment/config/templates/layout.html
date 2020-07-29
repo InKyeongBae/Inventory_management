@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul {
+        list-style:none;
+        margin:0;
+        padding:0;
+    }
+
+    li {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        border : 0;
+        float: left;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .nav {
+        display: block;
+        background-color: rgba(40, 58, 90, 1);
+        width: 100%;
+        position: fixed;
+
+    }
+    .nav .nav__navbar {
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        height: 40px;
+        padding: 15px 0;
+        align-items: center;
+    }
+
+    .nav__column {
+        color: white;
+    }
+
+    .nav__column .nav__list {
+        display: flex;
+        text-align: center;
+
+    }
+
+    .nav__column .mainIcon > a{
+        color : cadetblue;
+    }
+
+    .nav__list .nav__item > a{
+        color: white;
+    }
+
+    .nav__list .nav__item {
+
+        padding-left: 15px;
+    }
+
+    .main{
+        display: block;
+        padding-top: 70px;
+    }
+
+    .footer{
+        display: block;
+    }
+
+
+
+
+</style>
+</head>
+<body>
+<div class="nav">
+<div class="nav__navbar">
+    <div class="nav__column">
+        <p class="mainIcon"><a href="{% url "post:listSto" %}" target="_self">Inventory Manage</a></p>
+    </div>
+    <div class="nav__column">
+        <ul class="nav__list">
+            <li class="nav__item"><a href="{% url "post:createSto" %}" target="_self">상품 등록</a></li>
+            <li class="nav__item"><a href="{% url "post:createAcc" %}" target="_self">거래처 등록</a></li>
+            <li class="nav__item"><a href="{% url "post:listAcc" %}" target="_self">거래처 관리</a></li>
+        </ul>
+    </div>
+
+</div>
+</div>
+<div class="main">
+    {% block content %}
+    {% endblock %}
+</div>
+
+<div class="footer">
+    <hr/>
+    <h4>아무내용이나적는footer</h4>
+    <h5>나도 한줄 길게 아무내용이나 더 적어보자 띠링띠링</h5>
+</div>
+
+
+</body>
+</html>

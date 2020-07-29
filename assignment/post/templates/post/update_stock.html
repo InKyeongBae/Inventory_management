@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h2>Item 수정하기</h2>
+
+    <form action='{% url 'post:createSto' %}' method='POST'>
+        {% csrf_token %}
+        Title:
+        <input type="text" name="title" value={{ stock.title }}><br/>
+        Image:
+        <input type="image" name="image" value={{ stock.image }}><br/>
+        Content:
+        <textarea name="content" >{{ stock.content }}</textarea><br/>
+        Price:
+        <input type="text" name="price" value={{ stock.price }}><br/>
+        Amount:
+        <input type="text" name="amount" value={{ stock.amount }}><br/><br/>
+        <input type="submit" value="저장"/>
+    </form>
+{% endblock %}

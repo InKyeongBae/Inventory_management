@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h2>Item Register</h2>
+
+    <form action='{% url 'post:createSto' %}' method='POST'>
+        {% csrf_token %}
+        Title:
+        <input type="text" name="title" /><br/>
+        Image:
+        <input type="image" name="image" /><br/>
+        Content:
+        <textarea name="content"></textarea><br/>
+        Price:
+        <input type="text" name="price" /><br/>
+        Amount:
+        <input type="text" name="amount" /><br/><br/>
+        <input type="submit" value="저장"/>
+    </form>
+{% endblock %}

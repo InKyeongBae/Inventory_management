@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<ul>
+    {% for stock in stocks %}
+        <li><a href="{% url 'post:detailSto' pk=stock.pk %}">{{ stock }}</a></li><br/>
+    {% endfor %}
+</ul>
+{% endblock %}

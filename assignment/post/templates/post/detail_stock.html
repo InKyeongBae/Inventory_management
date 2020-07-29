@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h2>{{ stock.title }}</h2>
+
+    {{ stock.content }}<br/>
+    {{ stock.price }}<br/>
+    {{ stock.amount }}<br/>
+
+    <hr/>
+    <a href="{% url "post:listSto" %}">목록</a><br/>
+    <a href="{% url "post:updateSto" pk=account.pk %}">수정</a><br/>
+    <a href="{% url "post:deleteSto" pk=account.pk %}">삭제</a><br/>
+{% endblock %}

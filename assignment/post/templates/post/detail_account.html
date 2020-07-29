@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h2>{{ account.name }}</h2>
+
+    {{ account.call }}<br/>
+    {{ account.address }}<br/>
+    <hr/>
+    <a href="{% url "post:listAcc" %}">목록</a><br/>
+    <a href="{% url "post:updateAcc" pk=account.pk %}">수정</a><br/>
+    <a href="{% url "post:deleteAcc" pk=account.pk %}">삭제</a><br/>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h2>Account 수정하기</h2>
+
+    <form action='{% url 'post:createAcc' %}' method='POST'>
+        {% csrf_token %}
+        Name:
+        <input type="text" name="name" value={{ account.name }}><br/>
+        Call:
+        <input type="text" name="call" value={{ account.call }}><br/>
+        Address:
+        <input type="text" name="address" value={{ account.address }}><br/>
+        <input type="submit" value="저장"/>
+    </form>
+{% endblock %}

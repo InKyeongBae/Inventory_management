@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<ul>
+    {% for account in accounts %}
+        <li><a href="{% url 'post:detailAcc' pk=account.pk %}">{{ account }}</a></li><br/>
+    {% endfor %}
+</ul>
+{% endblock %}
