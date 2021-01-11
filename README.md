@@ -20,6 +20,6 @@
 
 
 
-### Screen Capture
+__Screen Capture__
 ![image](https://user-images.githubusercontent.com/65646971/104185716-ae1e2b00-5458-11eb-871a-86355258c9a8.png)
 
